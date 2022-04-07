@@ -20,7 +20,7 @@ export default function Login(props) {
     return (
         <div style={{ background: "rgb(35,39,65)", height: "100%" }}>
             <div className='formContainer'>
-                <div className='logintitle'>全球新闻发布管理系统</div>
+                <div className='logintitle'>新闻发布管理系统</div>
                 <Form name='normal_login' className='login-form' onFinish={onFinish}>
                     <Form.Item
                         name='username'
