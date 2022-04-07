@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+import IndexRouter from "./router/IndexRouter"
+import { Provider } from "react-redux"
+import store from "./redux/store"
+import "./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        // IndexRouter组件被包裹后，所有子组件都可以得到state数据
+        <Provider store={store}>
+            <IndexRouter></IndexRouter>
+        </Provider>
+    )
 }
-
-export default App;
